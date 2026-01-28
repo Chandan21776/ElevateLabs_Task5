@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5: Train-Test Split & Evaluation</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<h1>Task 5: Train-Test Split & Evaluation Metrics</h1>
+
+<input type="file" id="fileInput" accept=".csv">
+<button onclick="runModel()">Train & Evaluate</button>
+
+<h2>Model Explanation</h2>
+<p>
+Training data is used to learn patterns, while testing data evaluates how well the model performs on unseen data.
+</p>
+
+<h2>Evaluation Metrics</h2>
+<ul>
+  <li id="accuracy"></li>
+  <li id="precision"></li>
+  <li id="recall"></li>
+</ul>
+
+<h2>Confusion Matrix</h2>
+<table>
+  <tr>
+    <th></th>
+    <th>Predicted 0</th>
+    <th>Predicted 1</th>
+  </tr>
+  <tr>
+    <th>Actual 0</th>
+    <td id="tn"></td>
+    <td id="fp"></td>
+  </tr>
+  <tr>
+    <th>Actual 1</th>
+    <td id="fn"></td>
+    <td id="tp"></td>
+  </tr>
+</table>
+
+<p id="interpretation"></p>
+
+<script src="./script.js"></script>
+</body>
+</html>
